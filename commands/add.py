@@ -1,7 +1,7 @@
 import json 
-from pathlab import path 
+from pathlib import Path 
  
-DATA_PATH = path (__file__).resolve().parent.parent /"data"/"todo.json"
+DATA_PATH = Path(__file__).resolve().parent.parent / "data" / "todo.json"
 
 def add_task(title:str):
     with open (DATA_PATH,"r") as file:
@@ -17,6 +17,8 @@ def add_task(title:str):
 
     tasks.append(task)
 
-    with open(DATA_PATH,"W") as file:
+    with open(DATA_PATH, "w") as file:
         json.dump(tasks,file,indent=4)
+        
+    print(f"✅Task added : {title}")
 
