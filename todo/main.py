@@ -1,5 +1,5 @@
-from todo.parser import parse_args
-from todo.dispatcher import dispatch
+from parser import parse_args
+from dispatcher import dispatch
 
 def main():
     command, args = parse_args()  # kya command aaya aur kya argument
